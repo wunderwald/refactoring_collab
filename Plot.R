@@ -1,3 +1,10 @@
+#' Plotting Module
+#' 
+#' This module contains all plotting functions needed for Main.R.
+#'
+#' Moritz Wunderwald, 2025
+#' code@moritzwunderwald.de
+
 #' Create a Line Graph
 #'
 #' Plots a signal as a line graph with customizable color.

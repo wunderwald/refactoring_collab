@@ -1,3 +1,9 @@
+#' Analysis Module
+#' 
+#' This module contains functions for reading, pre-processing and analysing (dyadic) IBI data.
+#'
+#' Moritz Wunderwald, 2025
+#' code@moritzwunderwald.de
 
 
 # load dependencies

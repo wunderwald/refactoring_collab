@@ -1,3 +1,12 @@
+#' Heart Rate Variability (HRV) Analysis and Visualization
+#' 
+#' This script reads dyadic IBI data from XLSX files and calculates cross-
+#' correlation after some pre-processing. Creates a lot of plots for input data,
+#' pre-processed data and xcorr result.
+#'
+#' Moritz Wunderwald, 2025
+#' code@moritzwunderwald.de
+
 source("Analysis.R")
 source("Plot.R")
 
