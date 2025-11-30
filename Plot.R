@@ -19,9 +19,9 @@ line_graph <- function(signal, color) {
 }
 
 
-#' Create IBI Diagnostic Plots
+#' Create IBI Plots
 #'
-#' Generates a set of three diagnostic plots for Indices of Biotic Integrity (IBI) data:
+#' Generates a set of three plots for Inter-Beat-Interval data:
 #' a line graph, histogram, and box plot. All plots are displayed with the specified color.
 #'
 #' @param ibi A numeric vector containing IBI values to be plotted.
