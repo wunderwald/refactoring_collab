@@ -22,6 +22,8 @@ ibi_b_norm <- (ibi_b - minibi_b)/ibirange_b
 t <- 1:min(length(ibi_a_norm), length(ibi_b_norm))
 plot(t, ibi_a_norm[t], type = "l", col = "blue", lwd = 2)
 lines(t, ibi_b_norm[t], col = "red", lwd = 2)
+plot(ibi_a_norm, ibi_b_norm, pch = 16, col = "purple")
+
 # TODO plots
 # boxplots for each
 # line graphs together
