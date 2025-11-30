@@ -2,7 +2,7 @@
 library(XLConnect)
 
 parse_xlsx <- function(path) {
-  ibi <- readWorksheet(loadWorkbook("HRV_a.xlsx"),sheet=1, header=FALSE)
+  ibi <- readWorksheet(loadWorkbook(path),sheet=1, header=FALSE)
   colnames(ibi) <- c("IBI")
   return(ibi$IBI)
 }
@@ -14,7 +14,7 @@ trim <- function(signal, other_signal) {
 
 normalise <- function(signal) {
   min_sample <- min(signal)
-  max_sample <- max(sample)
+  max_sample <- max(signal)
   range <- max_sample - min_sample
   return((signal - min_sample) / range)
 }

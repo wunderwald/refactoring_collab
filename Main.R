@@ -16,16 +16,12 @@ ibi_b_norm <- normalise(ibi_b)
 # calculate cross-correlation
 ccf = xcorr(ibi_a_norm, ibi_b_norm)
 
-t <- 1:min(length(ibi_a_norm), length(ibi_b_norm))
-plot(t, ibi_a_norm[t], type = "l", lwd = 2, col = "red")
-t <- 1:min(length(ibi_a_norm), length(ibi_b_norm))
-plot(t, ibi_b_norm[t], type = "l", lwd = 2, col = "blue")
-plot(ibi_a_norm, ibi_b_norm, pch = 16, col = "purple")
-boxplot(ibi_a_norm, col = "red")
-boxplot(ibi_b_norm, col = "blue")
-plot(cross_corr, col="purple")
-hist(ibi_a_norm, col = "red")
-hist(ibi_b_norm, col = "blue")
+# plot both ibi signals as line graph, histogram and box plot
+ibi_plots(ibi_a_norm,"red")
+ibi_plots(ibi_b_norm, "blue")
 
-# TODO
-# modularise: analysis->read, normalise, cross-correlate; plot->ibi_plots, dyad_plots, xcorr_plot
+# plot dyad as scatter plot
+dyad_plot(ibi_a_norm, ibi_b_norm, "purple")
+
+# plot cross correlation function
+xcorr_plot(ccf, "purple")
