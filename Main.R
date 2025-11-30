@@ -19,9 +19,9 @@ ibirange_b <- maxibi_b - minibi_b
 ibi_a_norm <- (ibi_a - minibi_a)/ibirange_a
 ibi_b_norm <- (ibi_b - minibi_b)/ibirange_b
 cross_corr <- ccf(ibi_a_norm, ibi_b_norm, plot = FALSE)
-t <- 1:min(length(ibi_a_norm), length(ibi_b_norm))
+t <- 1:length(ibi_a_norm)
 plot(t, ibi_a_norm[t], type = "l", lwd = 2, col = "red")
-t <- 1:min(length(ibi_a_norm), length(ibi_b_norm))
+t <- 1:length(ibi_b_norm)
 plot(t, ibi_b_norm[t], type = "l", lwd = 2, col = "blue")
 plot(ibi_a_norm, ibi_b_norm, pch = 16, col = "purple")
 boxplot(ibi_a_norm, col = "red")
