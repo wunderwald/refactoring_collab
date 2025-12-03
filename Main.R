@@ -22,6 +22,5 @@ boxplot(ibi_b_norm, col = "blue")
 plot(cross_corr, col="purple")
 hist(ibi_a_norm, col = "red")
 hist(ibi_b_norm, col = "blue")
-
 # TODO
 # modularise: analysis->read, normalise, cross-correlate; plot->ibi_plots, dyad_plots, xcorr_plot
