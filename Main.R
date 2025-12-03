@@ -23,4 +23,17 @@ plot(cross_corr, col="purple")
 hist(ibi_a_norm, col = "red")
 hist(ibi_b_norm, col = "blue")
 # TODO
-# modularise: analysis->read, normalise, cross-correlate; plot->ibi_plots, dyad_plots, xcorr_plot
+# modularise
+
+
+ibi_a <- parse_xlsx("HRV_a.xlsx")
+ibi_b <- parse_xlsx("HRV_b.xlsx")
+ibi_a <- trim(ibi_a, ibi_b)
+ibi_b <- trim(ibi_b, ibi_a)
+ibi_a_norm <- normalise(ibi_a)
+ibi_b_norm <- normalise(ibi_b)
+ccf = xcorr(ibi_a_norm, ibi_b_norm)
+ibi_plots(ibi_a_norm,"red")
+ibi_plots(ibi_b_norm, "blue")
+dyad_plot(ibi_a_norm, ibi_b_norm, "purple")
+xcorr_plot(ccf, "purple")
