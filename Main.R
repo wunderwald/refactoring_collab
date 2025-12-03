@@ -1,12 +1,5 @@
-# install.packages("XLConnect")
-library(XLConnect)
-
-ibi <- readWorksheet(loadWorkbook("HRV_a.xlsx"),sheet=1, header=FALSE)
-colnames(ibi) <- c("IBI")
-ibi_a <- ibi$IBI
-ibi <- readWorksheet(loadWorkbook("HRV_b.xlsx"),sheet=1, header=FALSE)
-colnames(ibi) <- c("IBI")
-ibi_b <- ibi$IBI
+# TODO
+# load data from excel files into variables ibi_a, ibi_b 
 min_length <- min(length(ibi_a), length(ibi_b))
 ibi_a <- ibi_a[1:min_length]
 ibi_b <- ibi_b[1:min_length]
